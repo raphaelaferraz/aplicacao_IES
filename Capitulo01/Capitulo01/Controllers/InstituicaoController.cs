@@ -8,30 +8,30 @@ namespace Capitulo01.Controllers
         private static IList<Instituicao> instituicoes = new List<Instituicao>()
         {
             new Instituicao() {
-                InsituticaoID = 1,
+                InstituicaoID = 1,
                 Nome = "UniParaná",
                 Endereco = "Paraná"
             },
             new Instituicao() {
-                InsituticaoID = 2,
+                InstituicaoID = 2,
                 Nome = "UniSanta",
                 Endereco = "Santa Catarina"
             },
             new Instituicao()
             {
-                InsituticaoID = 3,
+                InstituicaoID = 3,
                 Nome = "UniSãoPaulo",
                 Endereco = "São Paulo"
             },
             new Instituicao()
             {
-                InsituticaoID = 4,
+                InstituicaoID = 4,
                 Nome = "UniSulGrandense",
                 Endereco = "Rio Grande do Sul"
             },
             new Instituicao()
             {
-                InsituticaoID = 5,
+                InstituicaoID = 5,
                 Nome = "UniCarioca",
                 Endereco = "Rio de Janeiro"
             }
@@ -52,39 +52,39 @@ namespace Capitulo01.Controllers
         public ActionResult Create(Instituicao instituicao)
         {
             instituicoes.Add(instituicao);
-            instituicao.InsituticaoID = instituicoes.Select(i => i.InsituticaoID).Max() + 1;
+            instituicao.InstituicaoID = instituicoes.Select(i => i.InstituicaoID).Max() + 1;
             return RedirectToAction("Index");
         }
 
         public ActionResult Edit(long id)
         {
-            return View(instituicoes.Where(i => i.InsituticaoID == id).First());
+            return View(instituicoes.Where(i => i.InstituicaoID == id).First());
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit(Instituicao instituicao)
         {
-            instituicoes[instituicoes.IndexOf(instituicoes.Where(i => i.InsituticaoID == instituicao.InsituticaoID).First())] = instituicao;
-            instituicoes.Where(i => i.InsituticaoID == instituicao.InsituticaoID).First();
+            instituicoes[instituicoes.IndexOf(instituicoes.Where(i => i.InstituicaoID == instituicao.InstituicaoID).First())] = instituicao;
+            instituicoes.Where(i => i.InstituicaoID == instituicao.InstituicaoID).First();
             return RedirectToAction("Index");
         }
 
         public ActionResult Details(long id) 
         {
-            return View(instituicoes.Where(i => i.InsituticaoID == id).First());
+            return View(instituicoes.Where(i => i.InstituicaoID == id).First());
         }
 
         public ActionResult Delete(long id)
         {
-            return View(instituicoes.Where(i => i.InsituticaoID == id).First());
+            return View(instituicoes.Where(i => i.InstituicaoID == id).First());
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Delete(Instituicao instituicao)
         {
-            instituicoes.Remove(instituicoes.Where(i => i.InsituticaoID == instituicao.InsituticaoID).First());
+            instituicoes.Remove(instituicoes.Where(i => i.InstituicaoID == instituicao.InstituicaoID).First());
             return RedirectToAction("Index");
         }
 

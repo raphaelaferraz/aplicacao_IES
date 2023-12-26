@@ -18,10 +18,10 @@
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.InsituticaoID)
+                @Html.DisplayNameFor(model => model.InstituicaoID)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.InsituticaoID)
+                @Html.DisplayFor(model => model.InstituicaoID)
         </dd>
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.Nome)
@@ -38,9 +38,9 @@
     </dl>
 </div>
 <div>
-    @Html.ActionLink("Editar", "Edit", new { id = Model.InsituticaoID  }) |
-    @Html.ActionLink("Detalhes", "Details", new { id = Model.InsituticaoID }) |
-    @Html.ActionLink("Deletar", "Delete", new { id = Model.InsituticaoID  })
+        @Html.ActionLink("Editar", "Edit", new { id = Model.InstituicaoID  }) |
+        @Html.ActionLink("Detalhes", "Details", new { id = Model.InstituicaoID }) |
+        @Html.ActionLink("Deletar", "Delete", new { id = Model.InstituicaoID  })
     <a asp-action="Index">Retornar para o início</a>
 </div>
 </body>
