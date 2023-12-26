@@ -55,5 +55,10 @@ namespace Capitulo01.Controllers
             instituicao.InsituticaoID = instituicoes.Select(i => i.InsituticaoID).Max() + 1;
             return RedirectToAction("Index");
         }
+
+        public ActionResult Edit(long id)
+        {
+            return View(instituicoes.Where(i => i.InsituticaoID == id).First());
+        }
     }
 }
