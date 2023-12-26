@@ -68,5 +68,10 @@ namespace Capitulo01.Controllers
             instituicoes[instituicoes.IndexOf(instituicoes.Where(i => i.InsituticaoID == instituicao.InsituticaoID).First())] = instituicao;
             return RedirectToAction("Index");
         }
+
+        public ActionResult Details(long id) 
+        {
+            return View(instituicoes.Where(i => i.InsituticaoID == id).First());
+        }
     }
 }
