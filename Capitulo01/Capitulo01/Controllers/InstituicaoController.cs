@@ -46,5 +46,14 @@ namespace Capitulo01.Controllers
         {
             return View();
         }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Create(Instituicao instituicao)
+        {
+            instituicoes.Add(instituicao);
+            instituicao.InsituticaoID = instituicoes.Select(i => i.InsituticaoID).Max() + 1;
+            return RedirectToAction("Index");
+        }
     }
 }
