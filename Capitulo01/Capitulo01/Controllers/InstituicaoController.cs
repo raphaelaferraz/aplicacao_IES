@@ -65,8 +65,7 @@ namespace Capitulo01.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit(Instituicao instituicao)
         {
-            instituicoes.Remove(instituicoes.Where(i => i.InsituticaoID == instituicao.InsituticaoID).First());
-            instituicoes.Add(instituicao);
+            instituicoes[instituicoes.IndexOf(instituicoes.Where(i => i.InsituticaoID == instituicao.InsituticaoID).First())] = instituicao;
             return RedirectToAction("Index");
         }
     }
