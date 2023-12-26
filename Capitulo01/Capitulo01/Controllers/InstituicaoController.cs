@@ -66,6 +66,7 @@ namespace Capitulo01.Controllers
         public ActionResult Edit(Instituicao instituicao)
         {
             instituicoes[instituicoes.IndexOf(instituicoes.Where(i => i.InsituticaoID == instituicao.InsituticaoID).First())] = instituicao;
+            instituicoes.Where(i => i.InsituticaoID == instituicao.InsituticaoID).First();
             return RedirectToAction("Index");
         }
 
@@ -73,5 +74,19 @@ namespace Capitulo01.Controllers
         {
             return View(instituicoes.Where(i => i.InsituticaoID == id).First());
         }
+
+        public ActionResult Delete(long id)
+        {
+            return View(instituicoes.Where(i => i.InsituticaoID == id).First());
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Delete(Instituicao instituicao)
+        {
+            instituicoes.Remove(instituicoes.Where(i => i.InsituticaoID == instituicao.InsituticaoID).First());
+            return RedirectToAction("Index");
+        }
+
     }
 }
