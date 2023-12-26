@@ -60,5 +60,14 @@ namespace Capitulo01.Controllers
         {
             return View(instituicoes.Where(i => i.InsituticaoID == id).First());
         }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit(Instituicao instituicao)
+        {
+            instituicoes.Remove(instituicoes.Where(i => i.InsituticaoID == instituicao.InsituticaoID).First());
+            instituicoes.Add(instituicao);
+            return RedirectToAction("Index");
+        }
     }
 }
