@@ -6,6 +6,7 @@ namespace Capitulo01.Controllers
 {
     public class DepartamentoController : Controller
     {
+
         private readonly IESContext _context;
 
         public DepartamentoController(IESContext context)
