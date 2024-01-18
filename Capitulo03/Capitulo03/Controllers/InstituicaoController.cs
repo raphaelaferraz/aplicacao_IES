@@ -27,14 +27,14 @@ namespace Capitulo03.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Nome")]Instituicao instituicao)
+        public async Task<IActionResult> Create([Bind("Nome, Endereco")] Instituicao instituicao)
         {
             try
             {
                 if(ModelState.IsValid)
                 {
-                    _context.Instituicoes.Add(instituicao);
-                    _context.SaveChangesAsync();
+                    _context.Add(instituicao);
+                    await _context.SaveChangesAsync();
                     return RedirectToAction(nameof(Index));
                 }
             }
