@@ -11,7 +11,7 @@ namespace Capitulo01.Controllers
 
         public DepartamentoController(IESContext context)
         {
-            _context = context;
+            this._context = context;
         }
 
         public async Task<IActionResult> Index()

@@ -3,12 +3,33 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
+var connectionString = builder.Configuration.GetConnectionString("IESConnection");
+
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-builder.Services.AddEntityFrameworkNpgsql().AddDbContext<IESContext>(options => options.UseNpgsql("IESConnection"));
+
+builder.Services.AddEntityFrameworkNpgsql().AddDbContext<IESContext>(options => options.UseNpgsql(connectionString));
 
 var app = builder.Build();
+
+// Certifique-se de aplicar a inicialização do banco de dados
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+
+    try
+    {
+        var context = services.GetRequiredService<IESContext>();
+        IESDbInitializer.Initialize(context);
+    }
+    catch (Exception ex)
+    {
+        // Adicione aqui a lógica para tratar erros durante a inicialização
+        var logger = services.GetRequiredService<ILogger<Program>>();
+        logger.LogError(ex, "Um erro ocorreu ao criar o banco de dados.");
+    }
+}
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
