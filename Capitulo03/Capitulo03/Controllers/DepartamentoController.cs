@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using NuGet.Frameworks;
 using System.Threading.Tasks;
 
-namespace Capitulo02.Controllers
+namespace Capitulo03.Controllers
 {
 	public class DepartamentoController : Controller
 	{
