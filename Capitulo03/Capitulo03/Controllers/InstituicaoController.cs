@@ -17,5 +17,11 @@ namespace Capitulo03.Controllers
         {
             return View(await _context.Instituicoes.OrderBy(i => i.InstituicaoID).ToListAsync());
         }
+
+        //GET: Instituicao/Create
+        public async Task<IActionResult> Create()
+        {
+            return View();
+        }
     }
 }
