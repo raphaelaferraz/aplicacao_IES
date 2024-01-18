@@ -120,5 +120,23 @@ namespace Capitulo03.Controllers
 
             return View(instituicao);
         }
+
+        // GET: Instituicao/Delete/id
+        public async Task<IActionResult> Delete(long? id)
+        {
+            if(id == null)
+            {
+                return NotFound();
+            }
+
+            var instituicao = await _context.Instituicoes.SingleOrDefaultAsync(i => i.InstituicaoID == id);
+
+            if(instituicao == null)
+            {
+                return NotFound();
+            }
+
+            return View(instituicao);
+        }
     }
 }
