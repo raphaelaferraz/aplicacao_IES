@@ -104,5 +104,21 @@ namespace Capitulo03.Controllers
             return _context.Instituicoes.Any(i => i.InstituicaoID == id);
         }
 
+        public async Task<IActionResult> Details(long? id)
+        {
+            if(id == null)
+            {
+                return NotFound();
+            }
+
+            var instituicao = await _context.Instituicoes.SingleOrDefaultAsync(i => i.InstituicaoID == id);
+
+            if(instituicao == null)
+            {
+                return NotFound();  
+            }
+
+            return View(instituicao);
+        }
     }
 }
