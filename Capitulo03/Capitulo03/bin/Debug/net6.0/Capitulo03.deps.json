@@ -9,6 +9,7 @@
       "Capitulo03/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "6.0.21",
+          "Microsoft.EntityFrameworkCore.Tools": "6.0.21",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "6.0.16",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "6.0.8"
         },
@@ -1090,16 +1091,33 @@
         }
       },
       "Microsoft.EntityFrameworkCore.Analyzers/6.0.21": {},
-      "Microsoft.EntityFrameworkCore.Relational/6.0.12": {
+      "Microsoft.EntityFrameworkCore.Design/6.0.21": {
+        "dependencies": {
+          "Humanizer.Core": "2.14.1",
+          "Microsoft.EntityFrameworkCore.Relational": "6.0.21"
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.EntityFrameworkCore.Design.dll": {
+            "assemblyVersion": "6.0.21.0",
+            "fileVersion": "6.0.2123.36206"
+          }
+        }
+      },
+      "Microsoft.EntityFrameworkCore.Relational/6.0.21": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "6.0.21",
           "Microsoft.Extensions.Configuration.Abstractions": "6.0.0"
         },
         "runtime": {
           "lib/net6.0/Microsoft.EntityFrameworkCore.Relational.dll": {
-            "assemblyVersion": "6.0.12.0",
-            "fileVersion": "6.0.1222.56411"
+            "assemblyVersion": "6.0.21.0",
+            "fileVersion": "6.0.2123.36206"
           }
+        }
+      },
+      "Microsoft.EntityFrameworkCore.Tools/6.0.21": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Design": "6.0.21"
         }
       },
       "Microsoft.Extensions.Caching.Abstractions/6.0.0": {
@@ -1372,7 +1390,7 @@
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "6.0.21",
           "Microsoft.EntityFrameworkCore.Abstractions": "6.0.21",
-          "Microsoft.EntityFrameworkCore.Relational": "6.0.12",
+          "Microsoft.EntityFrameworkCore.Relational": "6.0.21",
           "Npgsql": "6.0.8"
         },
         "runtime": {
@@ -2818,12 +2836,26 @@
       "path": "microsoft.entityframeworkcore.analyzers/6.0.21",
       "hashPath": "microsoft.entityframeworkcore.analyzers.6.0.21.nupkg.sha512"
     },
-    "Microsoft.EntityFrameworkCore.Relational/6.0.12": {
+    "Microsoft.EntityFrameworkCore.Design/6.0.21": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-HBtRGHtF0Vf+BIQTkRGiopmE5rLYhj59xPpd17S1tLgYpiHDVbepCuHwh5H63fzjO99Z4tW5wmmEGF7KnD91WQ==",
-      "path": "microsoft.entityframeworkcore.relational/6.0.12",
-      "hashPath": "microsoft.entityframeworkcore.relational.6.0.12.nupkg.sha512"
+      "sha512": "sha512-G+e0jPI1nD2DHszHXGqO57ogAVIKRy4930jCb7W/v2JfYKVcEbupzdYxEOQAGZws98MXllHNSqeb6fE1EW131A==",
+      "path": "microsoft.entityframeworkcore.design/6.0.21",
+      "hashPath": "microsoft.entityframeworkcore.design.6.0.21.nupkg.sha512"
+    },
+    "Microsoft.EntityFrameworkCore.Relational/6.0.21": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Ev5FM2KpXJu7+Dm9qvLf1FhSJMytrhSXho92Vompmgeiz3p4InldluidmKKmv8nZQAjs9dTCUUyvk1pxQjysaQ==",
+      "path": "microsoft.entityframeworkcore.relational/6.0.21",
+      "hashPath": "microsoft.entityframeworkcore.relational.6.0.21.nupkg.sha512"
+    },
+    "Microsoft.EntityFrameworkCore.Tools/6.0.21": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-IFh+eXqp0t4WEQ7ZE++lJWEdaX4NQ6HcNpHqNKqFd+h+tnFgTM/RIEYzo56U//+dbIi4/bhnglSMH9cvYqLZ5A==",
+      "path": "microsoft.entityframeworkcore.tools/6.0.21",
+      "hashPath": "microsoft.entityframeworkcore.tools.6.0.21.nupkg.sha512"
     },
     "Microsoft.Extensions.Caching.Abstractions/6.0.0": {
       "type": "package",

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "jowKDMVeu9evMF1ibnzmZxUdEAdKwRzcrBek6rupmV6ndLfikx2kvHI/IHhvpWupGnnoI+6K34uwBg1hp17xIA==",
+  "dgSpecHash": "BbkIuYBFrRcpQc4l/n0APRMxlHNOKdPEJ4brmlkjo1nE8VByUZE+7dydec3CF1NZfLELEx6QeBEzTf44x+8iAg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Inteli\\Documents\\projetos\\aplicacao_IES\\Capitulo03\\Capitulo03\\Capitulo03.csproj",
   "expectedPackageFiles": [
@@ -76,7 +76,9 @@
     "C:\\Users\\Inteli\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.21\\microsoft.entityframeworkcore.6.0.21.nupkg.sha512",
     "C:\\Users\\Inteli\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\6.0.21\\microsoft.entityframeworkcore.abstractions.6.0.21.nupkg.sha512",
     "C:\\Users\\Inteli\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\6.0.21\\microsoft.entityframeworkcore.analyzers.6.0.21.nupkg.sha512",
-    "C:\\Users\\Inteli\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\6.0.12\\microsoft.entityframeworkcore.relational.6.0.12.nupkg.sha512",
+    "C:\\Users\\Inteli\\.nuget\\packages\\microsoft.entityframeworkcore.design\\6.0.21\\microsoft.entityframeworkcore.design.6.0.21.nupkg.sha512",
+    "C:\\Users\\Inteli\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\6.0.21\\microsoft.entityframeworkcore.relational.6.0.21.nupkg.sha512",
+    "C:\\Users\\Inteli\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\6.0.21\\microsoft.entityframeworkcore.tools.6.0.21.nupkg.sha512",
     "C:\\Users\\Inteli\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\6.0.0\\microsoft.extensions.caching.abstractions.6.0.0.nupkg.sha512",
     "C:\\Users\\Inteli\\.nuget\\packages\\microsoft.extensions.caching.memory\\6.0.1\\microsoft.extensions.caching.memory.6.0.1.nupkg.sha512",
     "C:\\Users\\Inteli\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\6.0.0\\microsoft.extensions.configuration.abstractions.6.0.0.nupkg.sha512",
