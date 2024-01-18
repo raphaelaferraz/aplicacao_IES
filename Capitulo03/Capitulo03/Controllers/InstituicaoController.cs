@@ -138,5 +138,15 @@ namespace Capitulo03.Controllers
 
             return View(instituicao);
         }
+
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteConfirmed(long? id)
+        {
+            var instituicao = await _context.Instituicoes.SingleOrDefaultAsync(i => i.InstituicaoID == id);
+            _context.Remove(instituicao);
+            await _context.SaveChangesAsync();
+            return View(instituicao);
+        }
     }
 }
