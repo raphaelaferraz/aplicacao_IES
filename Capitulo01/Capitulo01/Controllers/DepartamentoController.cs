@@ -101,5 +101,23 @@ namespace Capitulo01.Controllers
         {
             return _context.Departamentos.Any(e => e.DepartamentoId == id);
         }
+
+        //GET: Departamento/Details
+        public async Task<IActionResult> Details(long? id)
+        {
+            if(id == null)
+            {
+                return NotFound();
+            }
+
+            var departamento = await _context.Departamentos.SingleOrDefaultAsync(m => m.DepartamentoId == id);
+
+            if(departamento == null)
+            {
+                return NotFound();
+            }
+
+            return View(departamento);
+        }
     }
 }
