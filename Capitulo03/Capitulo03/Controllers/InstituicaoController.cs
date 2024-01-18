@@ -46,5 +46,23 @@ namespace Capitulo03.Controllers
             return View(instituicao);
         }
 
+        //GET: Instituicao/Edit/id
+        public async Task<IActionResult> Edit(long? id)
+        {
+            if(id == null)
+            {
+                return NotFound();
+            }
+
+            var instituicao = await _context.Instituicoes.SingleOrDefaultAsync(i => i.InstituicaoID == id);
+
+            if (instituicao == null)
+            {
+                return NotFound();
+            }
+
+            return View(instituicao);
+        }
+
     }
 }
