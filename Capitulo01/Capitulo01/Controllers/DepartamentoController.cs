@@ -130,13 +130,23 @@ namespace Capitulo01.Controllers
 
             var departamento = await _context.Departamentos.SingleOrDefaultAsync(m => m.DepartamentoId == id);
 
-            if(departamento != null)
+            if(departamento == null)
             {
                 return NotFound();
             }
 
             return View(departamento);
 
+        }
+
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteConfirmed(long? id)
+        {
+            var departamento = await _context.Departamentos.SingleOrDefaultAsync(m => m.DepartamentoId == id);
+            _context.Departamentos.Remove(departamento);
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
         }
     }
 }
