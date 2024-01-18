@@ -47,9 +47,10 @@ namespace Capitulo03.Controllers
         }
 
         //GET: Instituicao/Edit/id
+        [HttpGet]
         public async Task<IActionResult> Edit(long? id)
         {
-            if(id == null)
+            if (id == null)
             {
                 return NotFound();
             }
@@ -62,6 +63,45 @@ namespace Capitulo03.Controllers
             }
 
             return View(instituicao);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit(long id, [Bind("InstituicaoID, Nome, Endereco")] Instituicao instituicao)
+        {
+            if (id != instituicao.InstituicaoID)
+            {
+                return NotFound();
+            }
+
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    _context.Update(instituicao);
+                    await _context.SaveChangesAsync();
+                    return RedirectToAction(nameof(Index));
+                }
+                catch (DbUpdateException)
+                {
+                    if (!InstituicaoExists(instituicao.InstituicaoID))
+                    {
+                        return NotFound();
+                    }
+                    else
+                    {
+                        throw;
+                    }
+                }
+            }
+
+            return View(instituicao);
+        }
+
+
+        private bool InstituicaoExists(long? id)
+        {
+            return _context.Instituicoes.Any(i => i.InstituicaoID == id);
         }
 
     }
