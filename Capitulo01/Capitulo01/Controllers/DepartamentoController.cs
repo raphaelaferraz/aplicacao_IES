@@ -46,5 +46,23 @@ namespace Capitulo01.Controllers
 
             return View(departamento);
         }
+
+        //GET: Departamento/Edit/5
+        public async Task<IActionResult> Edit(long? id)
+        {
+            if(id == null)
+            {
+                return NotFound();
+            }
+
+            var departamento = await _context.Departamentos.SingleOrDefaultAsync(m => m.DepartamentoId == id);
+
+            if (departamento == null)
+            {
+                return NotFound();
+            }
+
+            return View(departamento);
+        }
     }
 }
