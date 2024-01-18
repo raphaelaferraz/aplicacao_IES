@@ -119,5 +119,24 @@ namespace Capitulo01.Controllers
 
             return View(departamento);
         }
+
+        //GET: Departamento/Delete/id
+        public async Task<IActionResult> Delete(long? id)
+        {
+            if(id == null)
+            {
+                return NotFound();
+            }
+
+            var departamento = await _context.Departamentos.SingleOrDefaultAsync(m => m.DepartamentoId == id);
+
+            if(departamento != null)
+            {
+                return NotFound();
+            }
+
+            return View(departamento);
+
+        }
     }
 }
