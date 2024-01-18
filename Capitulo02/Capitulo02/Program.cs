@@ -1,8 +1,15 @@
+using Capitulo02.Data;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
+
+var connectionString = builder.Configuration.GetConnectionString("IESConnection");
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
+
+builder.Services.AddEntityFrameworkNpgsql().AddDbContext<IESContext>(options => options.UseNpgsql(connectionString));
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
