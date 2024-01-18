@@ -47,7 +47,7 @@ namespace Capitulo01.Controllers
             return View(departamento);
         }
 
-        //GET: Departamento/Edit/5
+        //GET: Departamento/Edit/id
         public async Task<IActionResult> Edit(long? id)
         {
             if(id == null)
@@ -63,6 +63,43 @@ namespace Capitulo01.Controllers
             }
 
             return View(departamento);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit(long? id, [Bind("DepartamentoId,Nome")] Departamento departamento)
+        {
+            if(id != departamento.DepartamentoId)
+            {
+                return NotFound();
+            }
+
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    _context.Update(departamento);
+                    await _context.SaveChangesAsync();
+                }
+                catch (DbUpdateConcurrencyException)
+                {
+                    if(!DepartamentoExists(departamento.DepartamentoId))
+                    {
+                        return NotFound();
+                    }
+                    else
+                    {
+                        throw;
+                    }
+                }
+
+            }
+            return RedirectToAction(nameof(Index));
+        }
+
+        private bool DepartamentoExists(long? id)
+        {
+            return _context.Departamentos.Any(e => e.DepartamentoId == id);
         }
     }
 }
