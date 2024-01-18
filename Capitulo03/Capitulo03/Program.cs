@@ -2,14 +2,14 @@ using Capitulo03.Data;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
+var connectionString = builder.Configuration.GetConnectionString("IESConnection");
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-var connectionString = builder.Configuration.GetConnectionString("IESConnection");
+builder.Services.AddEntityFrameworkNpgsql().AddDbContext<IESContext>(options => options.UseNpgsql(connectionString));
 var app = builder.Build();
 
-builder.Services.AddEntityFrameworkNpgsql().AddDbContext<IESContext>(options => options.UseNpgsql(connectionString));
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
