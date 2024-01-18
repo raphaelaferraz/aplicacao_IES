@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "BbkIuYBFrRcpQc4l/n0APRMxlHNOKdPEJ4brmlkjo1nE8VByUZE+7dydec3CF1NZfLELEx6QeBEzTf44x+8iAg==",
+  "dgSpecHash": "Lmj9aOip69325EZ+NweobhcFa5uMM1vha+7hWEq1DHGOL4sLqmO0mY1RtMR6C+jVKyprvykphnJq92r0GpXDhg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Inteli\\Documents\\projetos\\aplicacao_IES\\Capitulo03\\Capitulo03\\Capitulo03.csproj",
   "expectedPackageFiles": [
@@ -99,6 +99,7 @@
     "C:\\Users\\Inteli\\.nuget\\packages\\microsoft.visualstudio.web.codegeneration.templating\\6.0.16\\microsoft.visualstudio.web.codegeneration.templating.6.0.16.nupkg.sha512",
     "C:\\Users\\Inteli\\.nuget\\packages\\microsoft.visualstudio.web.codegeneration.utils\\6.0.16\\microsoft.visualstudio.web.codegeneration.utils.6.0.16.nupkg.sha512",
     "C:\\Users\\Inteli\\.nuget\\packages\\microsoft.visualstudio.web.codegenerators.mvc\\6.0.16\\microsoft.visualstudio.web.codegenerators.mvc.6.0.16.nupkg.sha512",
+    "C:\\Users\\Inteli\\.nuget\\packages\\microsoft.web.librarymanager.build\\2.1.175\\microsoft.web.librarymanager.build.2.1.175.nupkg.sha512",
     "C:\\Users\\Inteli\\.nuget\\packages\\microsoft.win32.primitives\\4.3.0\\microsoft.win32.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\Inteli\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
     "C:\\Users\\Inteli\\.nuget\\packages\\netstandard.library\\1.6.1\\netstandard.library.1.6.1.nupkg.sha512",
@@ -181,6 +182,7 @@
     "C:\\Users\\Inteli\\.nuget\\packages\\system.runtime.handles\\4.3.0\\system.runtime.handles.4.3.0.nupkg.sha512",
     "C:\\Users\\Inteli\\.nuget\\packages\\system.runtime.interopservices\\4.3.0\\system.runtime.interopservices.4.3.0.nupkg.sha512",
     "C:\\Users\\Inteli\\.nuget\\packages\\system.runtime.interopservices.runtimeinformation\\4.3.0\\system.runtime.interopservices.runtimeinformation.4.3.0.nupkg.sha512",
+    "C:\\Users\\Inteli\\.nuget\\packages\\system.runtime.loader\\4.3.0\\system.runtime.loader.4.3.0.nupkg.sha512",
     "C:\\Users\\Inteli\\.nuget\\packages\\system.runtime.numerics\\4.3.0\\system.runtime.numerics.4.3.0.nupkg.sha512",
     "C:\\Users\\Inteli\\.nuget\\packages\\system.security.accesscontrol\\6.0.0\\system.security.accesscontrol.6.0.0.nupkg.sha512",
     "C:\\Users\\Inteli\\.nuget\\packages\\system.security.cryptography.algorithms\\4.3.0\\system.security.cryptography.algorithms.4.3.0.nupkg.sha512",
