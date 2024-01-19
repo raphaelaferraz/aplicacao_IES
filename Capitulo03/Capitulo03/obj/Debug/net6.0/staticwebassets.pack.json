@@ -13,6 +13,26 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\Inteli\\Documents\\projetos\\aplicacao_IES\\Capitulo03\\Capitulo03\\wwwroot\\images\\aspnetcore.jpg",
+      "PackagePath": "staticwebassets\\images\\aspnetcore.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Inteli\\Documents\\projetos\\aplicacao_IES\\Capitulo03\\Capitulo03\\wwwroot\\images\\casadocodigo.png",
+      "PackagePath": "staticwebassets\\images\\casadocodigo.png"
+    },
+    {
+      "Id": "C:\\Users\\Inteli\\Documents\\projetos\\aplicacao_IES\\Capitulo03\\Capitulo03\\wwwroot\\images\\department.svg",
+      "PackagePath": "staticwebassets\\images\\department.svg"
+    },
+    {
+      "Id": "C:\\Users\\Inteli\\Documents\\projetos\\aplicacao_IES\\Capitulo03\\Capitulo03\\wwwroot\\images\\image.jpg",
+      "PackagePath": "staticwebassets\\images\\image.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Inteli\\Documents\\projetos\\aplicacao_IES\\Capitulo03\\Capitulo03\\wwwroot\\images\\institution.svg",
+      "PackagePath": "staticwebassets\\images\\institution.svg"
+    },
+    {
       "Id": "C:\\Users\\Inteli\\Documents\\projetos\\aplicacao_IES\\Capitulo03\\Capitulo03\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
