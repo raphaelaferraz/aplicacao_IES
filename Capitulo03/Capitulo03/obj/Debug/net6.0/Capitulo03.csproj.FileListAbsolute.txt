@@ -1,5 +1,6 @@
 C:\Users\Inteli\Documents\projetos\aplicacao_IES\Capitulo03\Capitulo03\bin\Debug\net6.0\appsettings.Development.json
 C:\Users\Inteli\Documents\projetos\aplicacao_IES\Capitulo03\Capitulo03\bin\Debug\net6.0\appsettings.json
+C:\Users\Inteli\Documents\projetos\aplicacao_IES\Capitulo03\Capitulo03\bin\Debug\net6.0\libman.json
 C:\Users\Inteli\Documents\projetos\aplicacao_IES\Capitulo03\Capitulo03\bin\Debug\net6.0\Capitulo03.staticwebassets.runtime.json
 C:\Users\Inteli\Documents\projetos\aplicacao_IES\Capitulo03\Capitulo03\bin\Debug\net6.0\Capitulo03.exe
 C:\Users\Inteli\Documents\projetos\aplicacao_IES\Capitulo03\Capitulo03\bin\Debug\net6.0\Capitulo03.deps.json
@@ -26,6 +27,7 @@ C:\Users\Inteli\Documents\projetos\aplicacao_IES\Capitulo03\Capitulo03\bin\Debug
 C:\Users\Inteli\Documents\projetos\aplicacao_IES\Capitulo03\Capitulo03\bin\Debug\net6.0\Microsoft.DotNet.Scaffolding.Shared.dll
 C:\Users\Inteli\Documents\projetos\aplicacao_IES\Capitulo03\Capitulo03\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
 C:\Users\Inteli\Documents\projetos\aplicacao_IES\Capitulo03\Capitulo03\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Inteli\Documents\projetos\aplicacao_IES\Capitulo03\Capitulo03\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
 C:\Users\Inteli\Documents\projetos\aplicacao_IES\Capitulo03\Capitulo03\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
 C:\Users\Inteli\Documents\projetos\aplicacao_IES\Capitulo03\Capitulo03\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
 C:\Users\Inteli\Documents\projetos\aplicacao_IES\Capitulo03\Capitulo03\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
@@ -231,4 +233,3 @@ C:\Users\Inteli\Documents\projetos\aplicacao_IES\Capitulo03\Capitulo03\obj\Debug
 C:\Users\Inteli\Documents\projetos\aplicacao_IES\Capitulo03\Capitulo03\obj\Debug\net6.0\Capitulo03.pdb
 C:\Users\Inteli\Documents\projetos\aplicacao_IES\Capitulo03\Capitulo03\obj\Debug\net6.0\Capitulo03.genruntimeconfig.cache
 C:\Users\Inteli\Documents\projetos\aplicacao_IES\Capitulo03\Capitulo03\obj\Debug\net6.0\ref\Capitulo03.dll
-C:\Users\Inteli\Documents\projetos\aplicacao_IES\Capitulo03\Capitulo03\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
