@@ -8,24 +8,24 @@
       "destination": "wwwroot/lib/bootstrap/"
     },
     {
-      "provider": "cdnjs",
       "library": "jquery@3.5.1",
       "destination": "wwwroot/lib/jquery/"
     },
     {
-      "provider": "cdnjs",
       "library": "jquery-validate@1.19.1",
       "destination": "wwwroot/lib/jquery-validate/"
     },
     {
-      "provider": "cdnjs",
       "library": "jquery-validation-unobtrusive@3.2.11",
       "destination": "wwwroot/lib/jquery-validation-unobtrusive/"
     },
     {
-      "provider": "cdnjs",
       "library": "popper.js@2.4.0",
       "destination": "wwwroot/lib/popper.js/"
+    },
+    {
+      "library": "datatables@1.10.20",
+      "destination": "wwwroot/lib/datatables/"
     }
   ]
 }
