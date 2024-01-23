@@ -4,64 +4,73 @@
     ViewData["Title"] = "Index2";
     Layout = "~/Views/Shared/_LayoutIES.cshtml";
 }
-@section Styles{
-    <environment include="Development">
-		<link rel="stylesheet" href="~/lib/datatables/css/jquery.dataTables.min.css" />
-     </environment>
-     <environment exclude="Development">
-		<link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css"
-              asp-fallback-href="~/lib/datatables/css/jquery.dataTables.min.css" asp-fallback-test-class="sr-only" asp-fallback-test
-              -property="position" asp-fallback-test-value="absolute" />
-     </environment>
-}
-<h1>Index</h1>
 
-<div class="card-block">
-    <div class="card-header	text-white	bg-primary	text-center	h1">
-        Instituições Registradas
-    </div>
-    <div class="card-body"> 
-        <table id="tabela_instituicoes">
-            <thead>
-                <tr>
-                    <th>
-                        @Html.DisplayNameFor(model	=>	model.InstituicaoID)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model	=>	model.Nome)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model	=>	model.Endereco)
-                    </th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach(var item in Model)
-                {
+<!DOCTYPE html>[
+<html>
+<head>
+    @section Styles{
+        <environment include="Development">
+		    <link rel="stylesheet" href="~/lib/datatables/css/jquery.dataTables.min.css" />
+         </environment>
+         <environment exclude="Development">
+		    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css"
+                  asp-fallback-href="~/lib/datatables/css/jquery.dataTables.min.css" asp-fallback-test-class="sr-only" asp-fallback-test
+                  -property="position" asp-fallback-test-value="absolute" />
+         </environment>
+    }
+   @RenderSection("styles", false)
+</head>
+<body>
+    <h1>Index</h1>
+
+    <div class="card-block">
+        <div class="card-header	text-white	bg-primary	text-center	h1">
+            Instituições Registradas
+        </div>
+        <div class="card-body"> 
+            <table id="tabela_instituicoes">
+                <thead>
                     <tr>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.InstituicaoID)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Nome)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Endereco)
-                        </td>
-                        <td>
-                            <a asp-action="Edit" asp-route-id="@item.InstituicaoID">Edit |</a>
-                            <a asp-action="Details" asp-route-id="@item.InstituicaoID">Details|</a>
-                            <a asp-action="Delete" asp-route-id="@item.InstituicaoID">Delete |</a>
-                        </td>
+                        <th>
+                            @Html.DisplayNameFor(model	=>	model.InstituicaoID)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model	=>	model.Nome)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model	=>	model.Endereco)
+                        </th>
                     </tr>
-                }
-            </tbody>
-        </table>
+                </thead>
+                <tbody>
+                    @foreach(var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.InstituicaoID)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Nome)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Endereco)
+                            </td>
+                            <td>
+                                <a asp-action="Edit" asp-route-id="@item.InstituicaoID">Edit |</a>
+                                <a asp-action="Details" asp-route-id="@item.InstituicaoID">Details|</a>
+                                <a asp-action="Delete" asp-route-id="@item.InstituicaoID">Delete |</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+        <div class="card-footer bg-success text-center">
+            <a asp-action="Create" class="btn-success">Criar uma nova instituição</a>
+        </div>
     </div>
-    <div class="card-footer bg-success text-center">
-        <a asp-action="Create" class="btn-success">Criar uma nova instituição</a>
-    </div>
-</div>
+    @RenderSection("ScriptPage", false)
+</body>
 @section ScriptPage	{
     <environment include="Development">
 		<script	src="~/lib/datatables/js/jquery.dataTables.min.js"></script>
@@ -77,4 +86,4 @@
 		});
 	</script>
 }
-
+</html>
