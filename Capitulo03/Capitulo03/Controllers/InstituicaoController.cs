@@ -146,6 +146,7 @@ namespace Capitulo03.Controllers
             var instituicao = await _context.Instituicoes.SingleOrDefaultAsync(i => i.InstituicaoID == id);
             _context.Remove(instituicao);
             await _context.SaveChangesAsync();
+            TempData["Message"] = $"Instituição {instituicao.Nome.ToUpper()} foi removida!";
             return View(instituicao);
         }
     }
